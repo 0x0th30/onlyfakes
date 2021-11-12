@@ -5,7 +5,8 @@
     "password": "postgres",
     "database": "news_db",
     "define": {
-        "underscored_all": true,
+        "underscored": true,
+        "underscoredAll": true,
         "timestamps": true
     }
 }

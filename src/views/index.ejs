@@ -7,62 +7,32 @@
                     <button class="btn bg-green text-black" type="submit"><i class="bi bi-search"></i></button>
                 </div>
             </form>
+
+            <br><br>
  
-            <div class="row mb-3">
-                <!--<div class="col-md-auto">
-                    <img class="rounded border border-light" src="2dac9b3a56d3e44350ea064373b0a124.jpg" width="250px" height="200px">
-                </div>-->
+            <% for (let item in news) { %>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href = '/news?id=<%= news[item].id %>'>
+                            <strong><h2> <%= news[item].title %> </h2></strong><br>
+                        </a>
+                        
+                        <p class="text-justify">
+                            <%- news[item].body.slice(0, 255) -%>...
+                        </p>
+                    </div>
 
-                <div class="col">
-                    <strong><h2>Título</h2></strong><br>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum
-                    laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                    obcaecati tenetur iure eius earum ut molestias architecto...</p>
+                    <div class="col-2">
+                        <a href="#?id=0">
+                            <button type="button" class="btn btn-primary">Editar</button>
+                        </a>
+                        <a href="#?id=0">
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                        </a>
+                    </div>
                 </div>
+            <% } %>
 
-                <div class="col-2">
-                    <a href="#?id=0">
-                        <button type="button" class="btn btn-primary">Editar</button>
-                    </a>
-                    <a href="#?id=0">
-                        <button type="button" class="btn btn-danger">Excluir</button>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <!--<div class="col-md-auto">
-                    <img class="rounded border border-light" src="aviao1200x848.jpg" width="250px" height="200px">
-                </div>-->
-
-                <div class="col">
-                    <strong><h2>Título</h2></strong><br>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum
-                    laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                    obcaecati tenetur iure eius earum ut molestias architecto...</p>
-                </div>
-
-                <div class="col-2">
-                    <a href="#?id=0">
-                        <button type="button" class="btn btn-primary">Editar</button>
-                    </a>
-                    <a href="#?id=0">
-                        <button type="button" class="btn btn-danger">Excluir</button>
-                    </a>
-                </div>
-            </div>
-
-            <!--<section class="centraliza">
-                <input class="caixa_pesquisa" type="text" name="pesquisa" size="40" placeholder="Pesquise..."/>
-                <a href="#"><button class="btn_busca">Buscar noticia</button></a>
-                <br><br>
-                <img src="imagens-site/provisório.jpg"/>
-                <h3 class="paragrafo">Descrição da noticia</h3>  
-                <h3 class="paragrafo2"></h3>             
-            </section>-->
         </div>
     </body>
 </html>
