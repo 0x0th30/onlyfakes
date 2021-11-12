@@ -6,6 +6,7 @@ routes.use(express.json());
 routes.use(express.urlencoded({ extended: true }));
 
 routes.get('/', controllers.getNews);
+routes.post('/', controllers.filterNews);
 
 routes.get('/news', controllers.readNews);
 

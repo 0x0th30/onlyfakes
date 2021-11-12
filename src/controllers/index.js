@@ -1,10 +1,26 @@
 const News = require('../models/News');
+const { Op } = require('sequelize');
 
 module.exports = {
     async getNews (req, res) {
         const news = await News.findAll()
 
         res.render('./index.ejs', { pageTitle: 'Home - News CRUD', news: news });
+    },
+
+    async filterNews (req, res) {
+        const search = req.body.search;
+        const news = await News.findAll({
+            where: {
+                [Op.or]: [
+                    { title: { [Op.like]: `%${search}%` } },
+                    { body: { [Op.like]: `%${search}%` }},
+                    { author: { [Op.like]: `%${search}%` }},
+                    
+                ]
+            }
+        })
+        res.render('./index.ejs', { pageTitle: 'Home - News CRUD', news: news } );
     },
 
     async readNews (req, res) {
