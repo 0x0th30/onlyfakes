@@ -1,0 +1,21 @@
+<%- include('./header.ejs') -%>
+
+        <div class="content container p-5">
+            <form method="POST" class="form-group">
+
+                <label class="form-label text-light mt-3">Título</label>
+                <input type="text" name="Title" id="Title" class="form-control" placeholder=" " maxlength="50" autofocus required>           
+				
+				<label class="form-label text-light mt-3">Autor</label>
+                <input type="text" name="Author" id="Author" class="form-control" placeholder=" " maxlength="50" autofocus required>
+                               
+                <label class="form-label text-light mt-3">Descrição</label>
+                <textarea name="Description" rows="4" class="form-control" style="resize: none" maxlength="60000" required></textarea>
+            </form>
+    
+            <div class="text-center">
+                <input type="submit" class="btn mt-3 bg-green w-50 text-light" value="Cadastrar">
+            </div>
+        </div>
+    </body>
+</html>

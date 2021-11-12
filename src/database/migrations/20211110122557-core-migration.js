@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      image_path: {
+      author: {
         type: Sequelize.STRING,
         allowNull: false
       },

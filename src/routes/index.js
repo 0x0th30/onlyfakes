@@ -1,9 +1,12 @@
 const express = require('express');
+const controllers = require('../controllers');
 
-const routes = express.Router();
+const apiRoutes = express.Router();
+apiRoutes.use(express.json());
+apiRoutes.use(express.urlencoded({ extended: true }));
 
-routes.get('/', (req, res) => {
-    res.send('hello world');
-});
+apiRoutes.get('/', controllers.getNews);
+apiRoutes.get('/create_news', controllers.getCreateNews);
+apiRoutes.post('/create_news', controllers.postCreateNews);
 
-module.exports = routes;
+module.exports = apiRoutes;
