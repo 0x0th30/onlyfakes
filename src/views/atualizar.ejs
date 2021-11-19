@@ -3,13 +3,13 @@
         <div class="content container p-5">
             <form method="POST" class="form-group">
 
-                <label class="form-label text-light mt-3">Título</label>
+                <label>Título</label>
                 <input type="text" name="title" id="title" class="form-control" value=" <%= news.title %> " maxlength="50" autofocus required>           
 				
-				<label class="form-label text-light mt-3">Autor</label>
+				<label>Autor</label>
                 <input type="text" name="author" id="author" class="form-control" value=" <%= news.author %> " maxlength="50" autofocus required>
                                
-                <label class="form-label text-light mt-3">Descrição</label>
+                <label>Descrição</label>
                 <textarea name="body" rows="4" class="form-control" style="resize: none" maxlength="60000" required>
                     <%= news.body %>
                 </textarea>
