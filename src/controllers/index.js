@@ -5,7 +5,7 @@ module.exports = {
     async getNews (req, res) {
         const news = await News.findAll()
 
-        res.render('./index.ejs', { pageTitle: 'Home - News CRUD', news: news });
+        res.render('./index.ejs', { pageTitle: 'Home - OnlyFakes', news: news });
     },
 
     async filterNews (req, res) {
@@ -20,7 +20,7 @@ module.exports = {
                 ]
             }
         })
-        res.render('./index.ejs', { pageTitle: 'Home - News CRUD', news: news } );
+        res.render('./index.ejs', { pageTitle: 'Home - OnlyFakes', news: news } );
     },
 
     async readNews (req, res) {
@@ -31,11 +31,11 @@ module.exports = {
             }
         })
 
-        res.render('./noticia.ejs', { pageTitle: `${news.title} - News CRUD`, news: news });
+        res.render('./noticia.ejs', { pageTitle: `${news.title} - OnlyFakes`, news: news });
     },
 
     async getCreateNews (req, res) {
-        res.render('./cadastrar.ejs', { pageTitle: 'Criação - News CRUD' });
+        res.render('./cadastrar.ejs', { pageTitle: 'Criação - OnlyFakes' });
     },
 
     async postCreateNews (req, res) {
