@@ -22,6 +22,20 @@
                 color: #232323;
             }
 
+            add-news-button {
+                background-color: #078dd1;
+                border: none;
+            }
+
+            a.plus-icon{
+                color: white;
+                font-size: 30px;
+            }
+
+            div.plus-button {
+                margin-left: 100px;
+            }
+
             #author_date,
             #titulo_noticia {
                 text-align: center;
@@ -58,9 +72,10 @@
                     OnlyFakes
                 </a>
 				
-				<div class="float-right">
-					<a class="nav-link" href="/create_news">
-						<button class="bg-light">Cadastrar Notícia</button>
+				<div class="plus-button">
+					<a href="/create_news" style = 'text-decoration: none' class = 'plus-icon'>
+						<div class="add-news-button"> 
+                            <span> + </span> </div>
 					</a>
 				</div>
 			</nav>
