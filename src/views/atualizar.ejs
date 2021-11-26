@@ -10,9 +10,7 @@
                 <input type="text" name="author" id="author" class="form-control" value=" <%= news.author %> " maxlength="50" autofocus required>
                                
                 <label>Descrição</label>
-                <textarea name="body" rows="4" class="form-control" style="resize: none" maxlength="60000" required>
-                    <%= news.body %>
-                </textarea>
+                <textarea name="body" rows="15" class="form-control" style="resize: none" maxlength="60000" required><%= news.body %></textarea>
 
                 <div class="text-center">
                     <input type="submit" class="btn mt-3 bg-green w-50 text-light" value="Cadastrar">
